@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        padding-top: 10%;
+      }
+      .logo{
+        background-color: transparent;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-top: 25px solid rgb(232, 3, 3);
+        border-right: 25px solid rgb(14, 14, 232);
+        border-bottom: 25px solid green;
+        border-left: 25px solid rgb(238, 238, 2);
+        border-radius: 50%;
+      }
+      .logo::before{
+        content: "";
+        position: absolute;
+        background-color: rgb(14, 14, 232);
+        width: 100px;
+        height: 25px;
+        top: 50%;
+        right: -20px;
+        transform: translate(-20%);
+      }
+      .logo::after{
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 0;
+        top: -40px;
+        right: -40px;
+        border-top: 140px solid transparent;
+        border-right: 200px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo"></div>
+  </body>
+</html>
